@@ -1,0 +1,124 @@
+{
+  "tests": [
+    {
+      "name": "contact.encapsulation()",
+      "setup": "npm install",
+      "run": "npm run test contact.encapsulation.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "contact.constructor()",
+      "setup": "",
+      "run": "npm run test contact.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "contact.getAge()",
+      "setup": "",
+      "run": "npm run test contact.getAge.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "contact.getDaysToBirthDay()",
+      "setup": "",
+      "run": "npm run test contact.getDaysToBirthDay.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "contact.getPhoneNumber()",
+      "setup": "",
+      "run": "npm run test contact.getPhoneNumber.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "bus.encapsulation()",
+      "setup": "",
+      "run": "npm run test bus.encapsulation.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "bus.constructor()",
+      "setup": "",
+      "run": "npm run test bus.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "bus.addPassengers()",
+      "setup": "",
+      "run": "npm run test bus.addPassengers.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "bus.removePassengers()",
+      "setup": "",
+      "run": "npm run test bus.removePassengers.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "bus.soldTickets()",
+      "setup": "",
+      "run": "npm run test bus.soldTickets.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "bus.isReadyToGo()",
+      "setup": "",
+      "run": "npm run test bus.isReadyToGo.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    },
+    {
+      "name": "bus.getAvailableSeats()",
+      "setup": "",
+      "run": "npm run test bus.getAvailableSeats.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 8
+    }
+  ]
+}
