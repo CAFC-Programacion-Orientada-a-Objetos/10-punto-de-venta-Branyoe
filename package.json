@@ -5,15 +5,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "node src/main.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "readline-sync": "^1.4.10",
     "@babel/core": "^7.17.5",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.16",
+    "readline-sync": "^1.4.10"
   }
 }
