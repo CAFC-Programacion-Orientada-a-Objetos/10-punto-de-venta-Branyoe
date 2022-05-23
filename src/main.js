@@ -136,9 +136,9 @@ class PuntoDeVenta {
         this._navigator(this.options[3])
       } else {
         let suma = 0;
-        this.venta.forEach((v, i) => {suma += v.total});
+        this.venta.forEach((v, i) => {suma += v.getTotal});
         this.venta.push({
-          total: suma
+          "total global": suma
         })
         this.data.ventas.push(this.venta);
         console.clear();

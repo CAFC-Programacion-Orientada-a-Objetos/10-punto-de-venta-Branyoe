@@ -28,33 +28,19 @@
   "data": {
     "productos": [
       {
-        "_nombre": "atun",
-        "_costo": 23
-      },
-      {
-        "_nombre": "jabon",
-        "_costo": 15
+        "_nombre": "22",
+        "_costo": 22
       }
     ],
     "ventas": [
       [
         {
-          "nombre": "atun",
-          "cantidad": 2,
-          "total": 46
+          "_nombre": "22",
+          "_cantidad": 2,
+          "_total": 44
         },
         {
-          "nombre": "atun",
-          "cantidad": 0.5,
-          "total": 11.5
-        },
-        {
-          "nombre": "jabon",
-          "cantidad": 1,
-          "total": 15
-        },
-        {
-          "total": 72.5
+          "total global": 44
         }
       ]
     ]
