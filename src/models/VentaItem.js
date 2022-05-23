@@ -5,6 +5,9 @@ export default class VentaItem{
     this.total = total;
   }
 
+
+  
+
   show() {
     console.table(this);
   }

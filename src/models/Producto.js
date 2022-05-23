@@ -5,6 +5,8 @@ export default class Producto{
   }
 
 
+
+  
   
   show() {
     console.table(this);

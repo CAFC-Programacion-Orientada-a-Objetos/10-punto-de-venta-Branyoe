@@ -18,6 +18,8 @@ class PuntoDeVenta {
     this.count = 0;
   }
 
+
+  
   //metodos*********************
   start() {
     let option = 1;
