@@ -77,7 +77,7 @@ class PuntoDeVenta {
     this.data.productos.push(newProducto);
     console.clear()
     console.log("\n¡Producto agregado!\n");
-    console.table(newProducto);
+    newProducto.show();
     Keyboard.readString("\npresione enter para continuar");
   }
 
@@ -87,7 +87,7 @@ class PuntoDeVenta {
     } else {
       this.data.productos.map((v, i) => {
         console.log(`${i}.-`);
-        console.table(v.getFormattedObj());
+        console.table(v);
       })
     }
 
@@ -101,7 +101,7 @@ class PuntoDeVenta {
       let productoIndex = Keyboard.readNumber('\n-->Introduce el "index" del producto a eliminar: ');
       console.clear();
       console.log("\n¡Producto Eliminado!\n");
-      console.table(this.data.productos[productoIndex]);
+      this.data.productos[productoIndex].show();
       this.data.productos.splice(productoIndex, 1);
     }
     Keyboard.readString("\npresione enter para continuar");

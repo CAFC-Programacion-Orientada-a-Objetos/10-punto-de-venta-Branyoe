@@ -1,7 +1,11 @@
 export default class Producto{
 
   constructor(nombre = "", costo = 0){
-    this._nombre = nombre;
-    this._costo = costo;
+    this.nombre = nombre;
+    this.costo = costo;
+  }
+
+  show(){
+    console.table(this);
   }
 }
