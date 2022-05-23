@@ -14,8 +14,4 @@ export default class Producto{
   set setCosto(neuevoCosto) {
     this._costo = neuevoCosto;
   }
-
-  show() {
-    console.table(this);
-  }
 }

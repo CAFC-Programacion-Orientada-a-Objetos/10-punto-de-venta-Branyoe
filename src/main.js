@@ -50,7 +50,6 @@ class PuntoDeVenta {
         break;
       case 6:
         this.Salir();
-        process.exitCode = 0;
         return
 
       default:
@@ -78,7 +77,7 @@ class PuntoDeVenta {
     this.data.productos.push(newProducto);
     console.clear()
     console.log("\n¡Producto agregado!\n");
-    newProducto.show();
+    console.table(newProducto);
     Keyboard.readString("\npresione enter para continuar");
   }
 
@@ -102,7 +101,7 @@ class PuntoDeVenta {
       let productoIndex = Keyboard.readNumber('\n-->Introduce el "index" del producto a eliminar: ');
       console.clear();
       console.log("\n¡Producto Eliminado!\n");
-      this.data.productos[productoIndex].show();
+      console.table(this.data.productos[productoIndex]);
       this.data.productos.splice(productoIndex, 1);
     }
     Keyboard.readString("\npresione enter para continuar");
@@ -126,7 +125,7 @@ class PuntoDeVenta {
       this.venta.push(productoDetalle);
       console.clear();
       console.log("\n¡Producto Agregado a la venta!\n");
-      productoDetalle.show();
+      console.table(productoDetalle);
       let exit = Keyboard.readString("\n-->Desea agregar otro producto? (S/N): ").toLowerCase()
       if (exit === "s") {
         this._navigator(this.options[3])

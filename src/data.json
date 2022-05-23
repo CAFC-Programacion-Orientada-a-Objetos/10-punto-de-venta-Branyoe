@@ -35,12 +35,47 @@
     "ventas": [
       [
         {
-          "_nombre": "22",
-          "_cantidad": 2,
-          "_total": 44
+          "producto": "sal",
+          "cantidad": 1,
+          "total": 3
         },
         {
-          "total global": 44
+          "total": 3
+        }
+      ],
+      [
+        {
+          "producto": "sal",
+          "cantidad": 1.5,
+          "total": 4.5
+        },
+        {
+          "producto": "sal",
+          "cantidad": 0.5,
+          "total": 1.5
+        },
+        {
+          "total": 6
+        }
+      ],
+      [
+        {
+          "producto": "Cal",
+          "cantidad": 1,
+          "total": 12
+        },
+        {
+          "total": 12
+        }
+      ],
+      [
+        {
+          "productoNombre": "sal",
+          "productoCantidad": 2,
+          "total": 6
+        },
+        {
+          "total": 6
         }
       ]
     ]
