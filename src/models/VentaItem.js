@@ -4,4 +4,8 @@ export default class VentaItem{
     this.cantidad = productoCantidad;
     this.total = total;
   }
+
+  show() {
+    console.table(this);
+  }
 }

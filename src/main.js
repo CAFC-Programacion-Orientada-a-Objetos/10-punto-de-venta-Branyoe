@@ -27,10 +27,10 @@ class PuntoDeVenta {
       const menu = new Menu(this.options);
       option = menu.show()
     } while (!(option >= 1 && option <= 6));
-    this.#navigator(this.options[option - 1]);
+    this._navigator(this.options[option - 1]);
   }
 
-  #navigator(opc) {
+  _navigator(opc) {
     console.clear();
 
     this.startDecoration(opc.name);
@@ -54,8 +54,8 @@ class PuntoDeVenta {
         break;
       case 6:
         this.Salir();
+        process.exitCode = 0;
         return
-        break;
 
       default:
         console.log("opcion ivalida");
@@ -76,15 +76,13 @@ class PuntoDeVenta {
   AgregarProducto() {
     let productoNombre = Keyboard.readString("-->Introduce el nombre del producto: ");
     let productoCosto = Keyboard.readNumber("-->Introduce el costo del producto: ");
-    // const newProducto = {
-    //   nombre: productoNombre,
-    //   costo: productoCosto
-    // }
+
     const newProducto = new Producto(productoNombre, productoCosto);
+
     this.data.productos.push(newProducto);
     console.clear()
     console.log("\n¡Producto agregado!\n");
-    console.table(newProducto);
+    newProducto.show();
     Keyboard.readString("\npresione enter para continuar");
   }
 
@@ -92,13 +90,15 @@ class PuntoDeVenta {
     if (this.data.productos.length === 0) {
       console.info("¡Aún no has agregado productos!");
     } else {
-      console.table(this.data.productos);
+      this.data.productos.map((v, i) => {
+        console.log(`${i}.-`);
+        console.table(v.getFormattedObj());
+      })
     }
 
   }
 
   EliminarProducto() {
-
     if (this.data.productos.length === 0) {
       this.MostarProductos();
     } else {
@@ -106,7 +106,7 @@ class PuntoDeVenta {
       let productoIndex = Keyboard.readNumber('\n-->Introduce el "index" del producto a eliminar: ');
       console.clear();
       console.log("\n¡Producto Eliminado!\n");
-      console.table(this.data.productos[productoIndex]);
+      this.data.productos[productoIndex].show();
       this.data.productos.splice(productoIndex, 1);
     }
     Keyboard.readString("\npresione enter para continuar");
@@ -121,23 +121,19 @@ class PuntoDeVenta {
       this.MostarProductos();
       let productoIndex = Keyboard.readNumber('\n-->Introduce el "index" del producto para agregarlo al carrito: ');
       let productoCantidad = Keyboard.readNumber('-->Introduce el numero de unidades del producto: ');
-      // let productoDetalle = {
-      //   producto: this.data.productos[productoIndex].nombre,
-      //   cantidad: productoCantidad,
-      //   total: this.data.productos[productoIndex].costo * productoCantidad
-      // }
+
       const productoDetalle = new VentaItem(
-        this.data.productos[productoIndex].nombre,
+        this.data.productos[productoIndex].getNombre,
         productoCantidad,
-        this.data.productos[productoIndex].costo * productoCantidad
+        this.data.productos[productoIndex].getCosto * productoCantidad
       );
       this.venta.push(productoDetalle);
       console.clear();
       console.log("\n¡Producto Agregado a la venta!\n");
-      console.table(productoDetalle);
+      productoDetalle.show();
       let exit = Keyboard.readString("\n-->Desea agregar otro producto? (S/N): ").toLowerCase()
       if (exit === "s") {
-        this.#navigator(this.options[3])
+        this._navigator(this.options[3])
       } else {
         let suma = 0;
         this.venta.forEach((v, i) => {suma += v.total});
@@ -165,7 +161,7 @@ class PuntoDeVenta {
       this.count += 1;
       let exit = Keyboard.readString("\n-->Desea ver la sigiente? (S/N): ").toLowerCase();
       if(exit === "s"){
-        this.#navigator(this.options[4]);
+        this._navigator(this.options[4]);
       }
       this.count = 0;
     }

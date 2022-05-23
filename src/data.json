@@ -28,54 +28,33 @@
   "data": {
     "productos": [
       {
-        "nombre": "sal",
-        "costo": 3
+        "_nombre": "atun",
+        "_costo": 23
+      },
+      {
+        "_nombre": "jabon",
+        "_costo": 15
       }
     ],
     "ventas": [
       [
         {
-          "producto": "sal",
-          "cantidad": 1,
-          "total": 3
+          "nombre": "atun",
+          "cantidad": 2,
+          "total": 46
         },
         {
-          "total": 3
-        }
-      ],
-      [
-        {
-          "producto": "sal",
-          "cantidad": 1.5,
-          "total": 4.5
-        },
-        {
-          "producto": "sal",
+          "nombre": "atun",
           "cantidad": 0.5,
-          "total": 1.5
+          "total": 11.5
         },
         {
-          "total": 6
-        }
-      ],
-      [
-        {
-          "producto": "Cal",
+          "nombre": "jabon",
           "cantidad": 1,
-          "total": 12
+          "total": 15
         },
         {
-          "total": 12
-        }
-      ],
-      [
-        {
-          "productoNombre": "sal",
-          "productoCantidad": 2,
-          "total": 6
-        },
-        {
-          "total": 6
+          "total": 72.5
         }
       ]
     ]
