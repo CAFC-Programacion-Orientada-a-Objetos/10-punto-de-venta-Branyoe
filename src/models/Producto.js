@@ -4,6 +4,8 @@ export default class Producto{
     this.costo = costo;
   }
 
+
+  
   show() {
     console.table(this);
   }
