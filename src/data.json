@@ -28,8 +28,8 @@
   "data": {
     "productos": [
       {
-        "_nombre": "22",
-        "_costo": 22
+        "nombre": "sal",
+        "costo": 3
       }
     ],
     "ventas": [
