@@ -11,15 +11,7 @@ export default class VentaItem{
 
   get getTotal() { return this._total; }
 
-  getFormattedObj(){
-    return {
-      "Nombre": this.getNombre,
-      "Cantidad": this.getCantidad,
-      "Total": this.getTotal
-    }
-  }
-
   show() {
-    console.table(this.getFormattedObj());
+    console.table(this);
   }
 }

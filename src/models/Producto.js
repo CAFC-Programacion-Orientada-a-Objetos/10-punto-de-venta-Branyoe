@@ -15,14 +15,7 @@ export default class Producto{
     this._costo = neuevoCosto;
   }
 
-  getFormattedObj() {
-    return {
-      "Nombre": this.getNombre,
-      "Costo": this.getCosto
-    }
-  }
-
   show() {
-    console.table(this.getFormattedObj());
+    console.table(this);
   }
 }

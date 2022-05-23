@@ -1,7 +1,3 @@
-// const { parse } = require("@babel/core");
-
-// console.log(data.options[0].id)
-
 import fs from 'fs';
 import Keyboard from './keyboard.js';
 import Menu from './models/Menu.js';
