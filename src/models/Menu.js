@@ -1,4 +1,5 @@
-import Keyboard from "../keyboard.js"
+import Utils from "../utils.js";
+import Keyboard from "./Keyboard.js"
 
 export default class Menu{
   constructor(options = []){
@@ -6,11 +7,11 @@ export default class Menu{
   }
 
   show() {
-    console.log("====[ Menu pricipal ]====");
-    this._options.forEach((option) => {
-      console.log(`${option.id}.- ${option.name}`);
+    Utils.showHeader("Menu");
+    this._options.forEach((option, i) => {
+      console.log(`${i+1}.- ${option}`);
     })
 
-    return Keyboard.readNumber("Selecciona una opcion: ");
+    return Keyboard.readNumber("\n  =>Selecciona una opcion: ");
   }
 }
